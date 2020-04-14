@@ -3,8 +3,11 @@ This repository consists of the following, in the given order :
 1. Python functions, in-built functions(map(), split(), lambda() etc)
 
 2. Basic operation on NumPy arrays :
+  
   2.1. Create array using lists, dictionaries etc
+  
   2.2. Array operations like slicing, indexing, manipulation.
+  
   2.3. Saving and Loading NumPy arrays
   
 3. Basic operations using Pandas Library :
