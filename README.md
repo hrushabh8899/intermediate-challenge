@@ -4,11 +4,11 @@ This repository consists of the following, in the given order :
 
 2. Basic operation on NumPy arrays :
   
-  2.1. Create array using lists, dictionaries etc
+    2.1. Create array using lists, dictionaries etc
   
-  2.2. Array operations like slicing, indexing, manipulation.
+    2.2. Array operations like slicing, indexing, manipulation.
   
-  2.3. Saving and Loading NumPy arrays
+    2.3. Saving and Loading NumPy arrays
   
 3. Basic operations using Pandas Library :
   3.1. Reading and Writing .csv files
