@@ -1,8 +1,8 @@
-This repository consists of the following, in the given order :
+# This repository consists of the following, in the given order :
 
-1. Python functions, in-built functions(map(), split(), lambda() etc)
+## 1. Python functions, in-built functions(map(), split(), lambda() etc)
 
-2. Basic operation on NumPy arrays :
+## 2. Basic operation on NumPy arrays :
   
     2.1. Create array using lists, dictionaries etc
   
@@ -10,7 +10,7 @@ This repository consists of the following, in the given order :
   
     2.3. Saving and Loading NumPy arrays
   
-3. Basic operations using Pandas Library :
+## 3. Basic operations using Pandas Library :
 
     3.1. Reading and Writing .csv files
   
@@ -19,9 +19,9 @@ This repository consists of the following, in the given order :
     3.3. Accessing elements and rows/columns
   
   
-4. Matplotlib, Seaborn basic insights on titanic dataset (Kaggle)
+## 4. Matplotlib, Seaborn basic insights on titanic dataset (Kaggle)
 
-5. Performing basic operations using OpenCV :
+## 5. Performing basic operations using OpenCV :
 
     5.1. Loading and Displaying images
   
@@ -34,10 +34,10 @@ This repository consists of the following, in the given order :
     5.5. Using webcam for livefeed
   
   
-*Everything till 5.3 is included in the intermediate-challenge.ipynb notebook*
-*5.4 and 5.5 have been uploaded as separate .py files for your reference*
+## *Everything till 5.3 is included in the intermediate-challenge.ipynb notebook*
+## *5.4 and 5.5 have been uploaded as separate .py files for your reference* 
 
-References :
+# References :
 
 NumPy tutorial : https://www.tutorialspoint.com/numpy/index.htm
 
