@@ -12,4 +12,4 @@
 
 *2. **KNN :** https://towardsdatascience.com/lets-make-a-knn-classifier-from-scratch-e73c43da346d*
 
-*3. **KMeans :** https://youtu.be/vtuH4VRq1AU
+*3. **KMeans :** https://youtu.be/vtuH4VRq1AU*
