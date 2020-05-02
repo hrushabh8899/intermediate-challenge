@@ -1,0 +1,157 @@
+1. Valid Parentheses : https://leetcode.com/problems/valid-parentheses/
+Code :
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        for i in s:
+            if i in ["(","{","["]:
+                stack.append(i)
+            else:
+                if stack == []:
+                    return False
+                j = stack.pop()
+                if j == "(":
+                    if i != ")":
+                        return False
+                if j == "[":
+                    if i != "]":
+                        return False
+                if j == "{":
+                    if i != "}":
+                        return False
+        if stack != []:
+            return False
+        return True
+
+2. Valid Palindrome : https://leetcode.com/problems/valid-palindrome/
+Code :
+
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s = "".join(i for i in s if i.isalnum())
+        s = s.lower()
+        r = "".join(reversed(s))
+        if s == r:
+            return True
+        else:
+            return False
+
+3. Merge Sorted Array : https://leetcode.com/problems/merge-sorted-array/
+Code :
+
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+        for i in range(n):
+            nums1[i+m] = nums2[i]
+        nums1.sort()
+
+4. Pascal's Triangle : https://leetcode.com/problems/pascals-triangle/
+Code :
+
+class Solution:
+    def generate(self, num_rows):
+        triangle = []
+
+        for row_num in range(num_rows):
+            # The first and last row elements are always 1.
+            row = [None for _ in range(row_num+1)]
+            row[0], row[-1] = 1, 1
+
+            # Each triangle element is equal to the sum of the elements
+            # above-and-to-the-left and above-and-to-the-right.
+            for j in range(1, len(row)-1):
+                row[j] = triangle[row_num-1][j-1] + triangle[row_num-1][j]
+
+            triangle.append(row)
+
+        return triangle
+
+5. Pascal's Triangle II : https://leetcode.com/problems/pascals-triangle-ii/
+Code :
+
+import math as m
+class Solution:
+    def getRow(self, rowIndex: int) -> List[int]:
+        if rowIndex == 0:
+            return [1]
+        elif rowIndex == 1:
+            return [1,1]
+        else:
+            row = [None for _ in range(rowIndex+1)]
+            row[0], row[-1] = 1,1
+
+            for i in range(1,rowIndex):
+                row[i] = int(m.factorial(rowIndex)/((m.factorial(i))*(m.factorial(rowIndex-i))))
+            return row
+
+6. Min Cost Climbing Stairs : https://leetcode.com/problems/min-cost-climbing-stairs/
+Code :
+
+class Solution:
+    def minCostClimbingStairs(self, cost: List[int]) -> int:
+        x, y = cost[0], cost[1]
+        ans = 0
+        for i in range(2, len(cost)):
+            x,y = y,cost[i] + min(x,y)
+
+        return min(x,y)
+
+7. Majority Element : https://leetcode.com/problems/majority-element/
+Code :
+
+import math as m
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        nums.sort()
+        return nums[m.floor(len(nums)/2)]
+
+8. Two Sum II - Input Array is Sorted : https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+Code :
+
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        i = 0
+        j = len(numbers)-1
+        sum = 0
+        index1 = index2 = 0
+
+        while(i<j):
+            sum = numbers[i]+numbers[j]
+
+            if sum == target:
+                index1 = i+1
+                index2 = j+1
+                return [index1,index2]
+            elif sum > target:
+                j-=1
+            elif sum < target:
+                i+=1
+
+9. Factorial Trailing Zeros : https://leetcode.com/problems/factorial-trailing-zeroes/
+Code :
+
+import math as m
+class Solution:
+    def trailingZeroes(self, n: int) -> int:
+        i = 5
+        count = 0
+        while(int(n/i) >= 1):
+            count += int(n/i)
+            i *= 5
+        return count
+
+10. Two Sum : https://leetcode.com/problems/two-sum/
+Code :
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        for i in range(0,len(nums)):
+            for j in range(i+1,len(nums)):
+                if(nums[i] + nums[j] == target):
+                    result = [i,j]
+                    return result
+        
